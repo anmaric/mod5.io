@@ -77,10 +77,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //
 // TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
 // so it can be called when server responds with the categories data.
-									
-									
-									//  my code: lines 90, 111, 112, 126-128, 134.
-									
+																		
 									
 // *** start ***
 // On first load, show home view
@@ -94,8 +91,7 @@ $ajaxUtils.sendGetRequest(
 });
 // *** finish **
 
-											
-
+	
 // Builds HTML for the home page based on categories array
 // returned from the server.
 function buildAndShowHomeHTML (categories) {
@@ -109,8 +105,8 @@ function buildAndShowHomeHTML (categories) {
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
-										// var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
-										  var chosenCategoryShortName = chooseRandomCategory (categories);
+			 var chosenCategoryShortName = chooseRandomCategory(categories).short_name;
+			// var chosenCategoryShortName = chooseRandomCategory (categories);
 									
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -126,7 +122,9 @@ function buildAndShowHomeHTML (categories) {
       //
       // var homeHtmlToInsertIntoMainPage = ....
 									//var homeHtmlToInsertIntoMainPage = insertProperty();
-      var homeHtmlToInsertIntoMainPage = insertProperty (homeHtml, "randomCategoryShortName", "' " + chosenCategoryShortName + "'");
+	    
+	     var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, "randomCategoryShortName","' " + chosenCategoryShortName + "'");
+
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
